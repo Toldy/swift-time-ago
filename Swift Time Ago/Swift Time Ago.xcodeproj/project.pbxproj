@@ -13,6 +13,7 @@
 		66379E6C1AE1A9FE00B1F76C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66379E6B1AE1A9FE00B1F76C /* Images.xcassets */; };
 		66379E6F1AE1A9FE00B1F76C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66379E6D1AE1A9FE00B1F76C /* LaunchScreen.xib */; };
 		66379E7B1AE1A9FE00B1F76C /* Swift_Time_AgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66379E7A1AE1A9FE00B1F76C /* Swift_Time_AgoTests.swift */; };
+		66379E851AE1AAA500B1F76C /* DateTimeFormattedAsTimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66379E841AE1AAA500B1F76C /* DateTimeFormattedAsTimeAgo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		66379E741AE1A9FE00B1F76C /* Swift Time AgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift Time AgoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66379E791AE1A9FE00B1F76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66379E7A1AE1A9FE00B1F76C /* Swift_Time_AgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Time_AgoTests.swift; sourceTree = "<group>"; };
+		66379E841AE1AAA500B1F76C /* DateTimeFormattedAsTimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeFormattedAsTimeAgo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				66379E6B1AE1A9FE00B1F76C /* Images.xcassets */,
 				66379E6D1AE1A9FE00B1F76C /* LaunchScreen.xib */,
 				66379E621AE1A9FE00B1F76C /* Supporting Files */,
+				66379E841AE1AAA500B1F76C /* DateTimeFormattedAsTimeAgo.swift */,
 			);
 			path = "Swift Time Ago";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66379E851AE1AAA500B1F76C /* DateTimeFormattedAsTimeAgo.swift in Sources */,
 				66379E671AE1A9FE00B1F76C /* ViewController.swift in Sources */,
 				66379E651AE1A9FE00B1F76C /* AppDelegate.swift in Sources */,
 			);
