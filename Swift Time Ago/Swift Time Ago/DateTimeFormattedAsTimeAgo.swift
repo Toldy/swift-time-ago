@@ -27,9 +27,9 @@ public func dateTimeFormattedAsTimeAgo(date: NSDate, referenceDate now: NSDate =
   
   let daysFromDate = now.daysFrom(date)
   switch daysFromDate {
-  case 2:
+  case 1:
     return yesterdayFormatter()
-  case 3...6:
+  case 2...6:
     return daysFormatter(daysFromDate)
   default:
     break
