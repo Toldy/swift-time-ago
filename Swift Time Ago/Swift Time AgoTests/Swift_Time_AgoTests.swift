@@ -46,7 +46,15 @@ class Swift_Time_AgoTests: XCTestCase {
   }
   
   func testDateTimesWhoseResultShouldBeHoursAgo() {
-    XCTAssert(false)
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:00:00")!, referenceDate: referenceDate) == "1 hour ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 08:00:01")!, referenceDate: referenceDate) == "1 hour ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 08:00:00")!, referenceDate: referenceDate) == "2 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 04:00:00")!, referenceDate: referenceDate) == "6 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-16 21:00:30")!, referenceDate: referenceDate) == "12 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-16 15:30:00")!, referenceDate: referenceDate) == "18 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-16 11:00:00")!, referenceDate: referenceDate) == "23 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-16 10:01:00")!, referenceDate: referenceDate) == "23 hours ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-16 10:00:01")!, referenceDate: referenceDate) == "23 hours ago")
   }
   
   func testDateTimesWhoseResultShouldBeYesterday() {
