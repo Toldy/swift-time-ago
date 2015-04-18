@@ -26,12 +26,13 @@ class Swift_Time_AgoTests: XCTestCase {
     super.tearDown()
   }
   
-  func testExample() {
-    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:59")!, referenceDate: referenceDate) == "Just now")
-  }
-  
   func testDateTimesWhoseResultShouldBeJustNow() {
-    XCTAssert(false)
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 10:00:00")!, referenceDate: referenceDate) == "Just now")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:59")!, referenceDate: referenceDate) == "Just now")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:45")!, referenceDate: referenceDate) == "Just now")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:30")!, referenceDate: referenceDate) == "Just now")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:15")!, referenceDate: referenceDate) == "Just now")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:01")!, referenceDate: referenceDate) == "Just now")
   }
 
   func testDateTimesWhoseResultShouldBeMinutesAgo() {
