@@ -75,11 +75,20 @@ class Swift_Time_AgoTests: XCTestCase {
     XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-12 10:00:00")!, referenceDate: referenceDate) == "5 days ago")
     XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-11 10:00:00")!, referenceDate: referenceDate) == "6 days ago")
     XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-10 23:42:00")!, referenceDate: referenceDate) == "6 days ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-10 10:00:01")!, referenceDate: referenceDate) == "6 days ago")
     XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-10 10:00:00")!, referenceDate: referenceDate) != "7 days ago")
   }
   
   func testDateTimesWhoseResultShouldBeWeeksAgo() {
-    XCTAssert(false)
+    println(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-20 10:00:00")!, referenceDate: referenceDate))
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-10 10:00:00")!, referenceDate: referenceDate) == "1 week ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-03 10:00:00")!, referenceDate: referenceDate) == "2 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-27 10:00:42")!, referenceDate: referenceDate) == "2 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-27 10:00:00")!, referenceDate: referenceDate) == "3 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-20 10:00:00")!, referenceDate: referenceDate) == "4 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-17 10:00:01")!, referenceDate: referenceDate) == "4 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-17 10:00:00")!, referenceDate: referenceDate) != "4 weeks ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-03-13 10:00:00")!, referenceDate: referenceDate) != "5 weeks ago")
   }
   
   func testDateTimesWhoseResultShouldBeMonthsAgo() {
