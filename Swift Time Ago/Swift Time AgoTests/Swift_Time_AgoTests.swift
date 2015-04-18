@@ -11,10 +11,15 @@ import XCTest
 import Swift_Time_Ago
 
 class Swift_Time_AgoTests: XCTestCase {
+  var formatter = NSDateFormatter()
+  var referenceDate: NSDate!
+
   // TODO: Tests
   
   override func setUp() {
     super.setUp()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    referenceDate = formatter.dateFromString("2015-04-17 10:00:00")!
   }
   
   override func tearDown() {
@@ -22,5 +27,38 @@ class Swift_Time_AgoTests: XCTestCase {
   }
   
   func testExample() {
-  }  
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2015-04-17 09:59:59")!, referenceDate: referenceDate) == "Just now")
+  }
+  
+  func testDateTimesWhoseResultShouldBeJustNow() {
+    XCTAssert(false)
+  }
+
+  func testDateTimesWhoseResultShouldBeMinutesAgo() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeHoursAgo() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeYesterday() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeDaysAgo() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeWeeksAgo() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeMonthsAgo() {
+    XCTAssert(false)
+  }
+  
+  func testDateTimesWhoseResultShouldBeYearsAgo() {
+    XCTAssert(false)
+  }
 }
