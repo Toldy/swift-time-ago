@@ -109,6 +109,11 @@ class Swift_Time_AgoTests: XCTestCase {
   }
   
   func testDateTimesWhoseResultShouldBeYearsAgo() {
-    XCTAssert(false)
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2014-04-17 09:59:59")!, referenceDate: referenceDate) == "1 year ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2010-04-17 09:59:59")!, referenceDate: referenceDate) == "5 years ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2008-04-17 09:59:59")!, referenceDate: referenceDate) == "7 years ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("2004-04-17 09:59:59")!, referenceDate: referenceDate) == "11 years ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("1994-04-17 09:59:59")!, referenceDate: referenceDate) == "21 years ago")
+    XCTAssert(dateTimeFormattedAsTimeAgo(formatter.dateFromString("1990-04-17 09:59:59")!, referenceDate: referenceDate) == "25 years ago")
   }
 }
