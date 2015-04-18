@@ -8,7 +8,7 @@
 
 import Foundation
 
-func dateTimeFormattedAsTimeAgo(date: NSDate, referenceDate now: NSDate = NSDate()) -> String {
+public func dateTimeFormattedAsTimeAgo(date: NSDate, referenceDate now: NSDate = NSDate()) -> String {
 
   let secondsFromDate = now.secondsFrom(date)
   if secondsFromDate < 60 {
